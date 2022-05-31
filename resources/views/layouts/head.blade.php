@@ -6,7 +6,7 @@
     <meta name="generator" content="Hugo 0.98.0">
     <title>Site E-commerce</title>
 
-    <link href="{{asset("css/bootstrap.min.css")}}" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="{{asset("css/bootstrap.min.css")}}" rel="stylesheet">
 
     {{-- lien pour lister les produits de la page d'Accueil --}}
     <link rel="stylesheet" href="{{asset("css/style_index.css")}}">
