@@ -19,4 +19,5 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', [MainController::class, 'index']);
+Route::get('/produit/{id}', [MainController::class, 'produit'])->name('voir_produit');
 
