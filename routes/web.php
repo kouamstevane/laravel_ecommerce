@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Shop\CartController;
 use App\Http\Controllers\Shop\MainController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,6 +19,11 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/', [MainController::class, 'index']);
+Route::get('/', [MainController::class, 'index'])->name('accuiel');
 Route::get('/produit/{id}', [MainController::class, 'produit'])->name('voir_produit');
+Route::get('/smarthPhone/{id}', [MainController::class, 'smarthPhone'])->name('voir_un_smarthPhone');
+Route::get('/smarthphone', [MainController::class, 'showSmarthPhone'])->name('showSmarthPhone');
+
+//route pour les carts
+Route::post('/panier/ajouter', [CartController::class, 'store'])->name('cart.store');
 
