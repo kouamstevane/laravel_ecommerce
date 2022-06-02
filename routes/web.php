@@ -20,9 +20,11 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', [MainController::class, 'index'])->name('accuiel');
+Route::get('/smarthphone', [MainController::class, 'showSmarthPhone'])->name('showSmarthPhone');
+Route::get('/laptop', [MainController::class, 'showLaptop'])->name('showLaptop');
+Route::get('/laptop/{id}', [MainController::class, 'laptop'])->name('voir_un_laptop');
 Route::get('/produit/{id}', [MainController::class, 'produit'])->name('voir_produit');
 Route::get('/smarthPhone/{id}', [MainController::class, 'smarthPhone'])->name('voir_un_smarthPhone');
-Route::get('/smarthphone', [MainController::class, 'showSmarthPhone'])->name('showSmarthPhone');
 
 //route pour les carts
 Route::post('/panier/ajouter', [CartController::class, 'store'])->name('cart.store');
